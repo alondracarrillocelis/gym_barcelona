@@ -210,12 +210,12 @@ export default function ProgresoScreen() {
           <View style={styles.tendenciaContainerWearable}>
             <ArrowUpCircle 
               size={12} 
-              color={datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#E53E3E'} 
+              color={datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#10b981'} 
               style={{ transform: [{ rotate: datosActuales[metricaSeleccionada].tendencia > 0 ? '0deg' : '180deg' }] }}
             />
             <Text style={[
               styles.tendenciaTextoWearable, 
-              { color: datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#E53E3E' }
+              { color: datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#10b981' }
             ]}>
               {Math.abs(datosActuales[metricaSeleccionada].tendencia)}%
             </Text>
@@ -227,7 +227,7 @@ export default function ProgresoScreen() {
             data={DATOS_PROGRESO[metricaSeleccionada]} 
             height={60} 
             width={width - 32} 
-            color="#E53E3E" 
+            color="#10b981" 
             mostrarEtiquetas={false}
           />
         </View>
@@ -327,12 +327,12 @@ export default function ProgresoScreen() {
           <View style={styles.tendenciaContainer}>
             <ArrowUpCircle 
               size={deviceType === 'tv' ? 28 : 20} 
-              color={datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#E53E3E'} 
+              color={datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#10b981'} 
               style={{ transform: [{ rotate: datosActuales[metricaSeleccionada].tendencia > 0 ? '0deg' : '180deg' }] }}
             />
             <Text style={[
               styles.tendenciaTexto, 
-              { fontSize: fontSize.metrica, color: datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#E53E3E' }
+              { fontSize: fontSize.metrica, color: datosActuales[metricaSeleccionada].tendencia > 0 ? '#48BB78' : '#10b981' }
             ]}>
               {Math.abs(datosActuales[metricaSeleccionada].tendencia)}%
             </Text>
@@ -360,7 +360,7 @@ export default function ProgresoScreen() {
           data={DATOS_PROGRESO[metricaSeleccionada]} 
           height={graphHeight} 
           width={width - 32} 
-          color="#E53E3E" 
+          color="#10b981" 
         />
       </View>
       
@@ -446,8 +446,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   metricaSeleccionada: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   metricLabel: {
     fontWeight: '500',
@@ -542,7 +542,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#E53E3E',
+    backgroundColor: '#10b981',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
@@ -575,8 +575,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 2,
   },
   metricaSeleccionadaWearable: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   metricLabelWearable: {
     fontWeight: '500',

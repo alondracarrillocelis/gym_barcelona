@@ -261,8 +261,8 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
   },
   diaSeleccionado: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   diaTexto: {
     fontWeight: '500',
@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 12,
     borderLeftWidth: 4,
-    borderLeftColor: '#E53E3E',
+    borderLeftColor: '#10b981',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
@@ -311,7 +311,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ECC94B',
   },
   nivelAvanzado: {
-    backgroundColor: '#E53E3E',
+    backgroundColor: '#10b981',
   },
   nivelTexto: {
     color: '#FFFFFF',
@@ -353,8 +353,8 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
   },
   diaSeleccionadoWearable: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   diaTextoWearable: {
     fontWeight: '500',
@@ -370,7 +370,7 @@ const styles = StyleSheet.create({
     padding: 8,
     marginBottom: 8,
     borderLeftWidth: 2,
-    borderLeftColor: '#E53E3E',
+    borderLeftColor: '#10b981',
   },
   claseNombreWearable: {
     fontWeight: 'bold',

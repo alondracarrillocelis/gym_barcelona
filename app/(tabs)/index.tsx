@@ -134,8 +134,8 @@ export default function HomeScreen() {
       case 'reservaciones':
         router.push('/reservaciones');
         break;
-      case 'informacion':
-        router.push('/informacion');
+      case 'información':
+        router.push('/información');
         break;
     }
   };
@@ -165,7 +165,7 @@ export default function HomeScreen() {
         
         <TouchableOpacity 
           style={styles.quickAccessButton}
-          onPress={() => navigateToSection('informacion')}
+          onPress={() => navigateToSection('información')}
         >
           <Info size={16} color="#10B981" />
           <Text style={{ fontSize: 10, marginLeft: 4, color: '#FFFFFF' }}>Ayuda</Text>
@@ -219,10 +219,10 @@ export default function HomeScreen() {
         </TouchableOpacity>
         <TouchableOpacity 
           style={[styles.featureCard, featureCardStyle]}
-          onPress={() => navigateToSection('informacion')}
+          onPress={() => navigateToSection('información')}
         >
           <Info size={deviceType === 'tv' ? 32 : 24} color="#10B981" />
-          <Text style={[styles.featureTitle, textStyle.featureTitle]}>Información</Text>
+          <Text style={[styles.featureTitle, textStyle.featureTitle]}>información</Text>
         </TouchableOpacity>
       </View>
 

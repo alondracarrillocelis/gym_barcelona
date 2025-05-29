@@ -427,8 +427,8 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
   },
   seccionActiva: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   seccionTexto: {
     fontWeight: '500',
@@ -475,8 +475,8 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
   },
   filtroActivo: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   filtroTexto: {
     color: '#4A5568',
@@ -543,7 +543,7 @@ const styles = StyleSheet.create({
     color: '#718096',
   },
   verMasButton: {
-    backgroundColor: '#E53E3E',
+    backgroundColor: '#10b981',
     borderRadius: 8,
     paddingVertical: 10,
     alignItems: 'center',
@@ -629,8 +629,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   seccionActivaWearable: {
-    backgroundColor: '#E53E3E',
-    borderColor: '#E53E3E',
+    backgroundColor: '#10b981',
+    borderColor: '#10b981',
   },
   seccionTextoWearable: {
     fontWeight: '500',
@@ -646,7 +646,7 @@ const styles = StyleSheet.create({
     padding: 8,
     marginBottom: 8,
     borderLeftWidth: 2,
-    borderLeftColor: '#E53E3E',
+    borderLeftColor: '#10b981',
   },
   planTituloWearable: {
     fontWeight: 'bold',
@@ -663,7 +663,7 @@ const styles = StyleSheet.create({
     padding: 8,
     marginBottom: 8,
     borderLeftWidth: 2,
-    borderLeftColor: '#E53E3E',
+    borderLeftColor: '#10b981',
   },
   recetaTituloWearable: {
     fontWeight: 'bold',

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet, useWindowDimensions, TouchableOpacity, Image } from 'react-native';
 
-const informacionData = [
+const informaciónData = [
   {
     id: '1',
     titulo: 'Beneficios de una Alimentación Saludable',
@@ -28,7 +28,7 @@ const informacionData = [
   },
 ];
 
-const InformacionGeneralScreen = () => {
+const informaciónGeneralScreen = () => {
   const { width } = useWindowDimensions();
   const [tipoDispositivo, setTipoDispositivo] = useState<'wearable' | 'smartphone' | 'tablet' | 'tv'>('smartphone');
 
@@ -84,8 +84,8 @@ const InformacionGeneralScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.titulo}>Información General</Text>
-      {informacionData.map((item) => (
+      <Text style={styles.titulo}>información General</Text>
+      {informaciónData.map((item) => (
         <View key={item.id} style={styles.card}>
           <Image source={item.imagen} style={styles.imagen} />
           <Text style={styles.tituloCard}>{item.titulo}</Text>
@@ -96,4 +96,4 @@ const InformacionGeneralScreen = () => {
   );
 };
 
-export default InformacionGeneralScreen;
+export default informaciónGeneralScreen;
