@@ -9,7 +9,8 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import { Dumbbell, CalendarCheck } from 'lucide-react-native';
+import { Dumbbell, CalendarCheck, X,CalendarX } from 'lucide-react-native';
+
 
 const CLASES_DISPONIBLES = [
   { id: 1, nombre: 'Yoga', horario: '10:00 AM', fecha: '2025-05-05', disponibles: 5 },
@@ -129,7 +130,7 @@ const ReservacionesScreen = () => {
       </TouchableOpacity>
 
       {/* Modal de clases reservadas */}
-      <Modal
+      {/* <Modal
         visible={modalVisible}
         animationType="slide"
         onRequestClose={() => setModalVisible(false)}
@@ -181,7 +182,81 @@ const ReservacionesScreen = () => {
             <Text style={{ color: 'white', textAlign: 'center' }}>Cerrar</Text>
           </Pressable>
         </View>
-      </Modal>
+      </Modal> */}
+      <Modal
+  visible={modalVisible}
+  animationType="slide"
+  onRequestClose={() => setModalVisible(false)}
+>
+  <View style={{ flex: 1, padding: 20, backgroundColor: '#fff' }}>
+    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Tus Reservaciones</Text>
+      <Pressable onPress={() => setModalVisible(false)}>
+        <X size={24} color="#374151" />
+      </Pressable>
+    </View>
+
+    {clasesReservadas.length === 0 ? (
+      <View style={{ alignItems: 'center', marginTop: 40 }}>
+        <CalendarX size={48} color="#9CA3AF" />
+        <Text style={{ marginTop: 12, fontSize: 16, color: '#6B7280' }}>
+          No tienes clases reservadas.
+        </Text>
+      </View>
+    ) : (
+      clasesReservadas.map(clase => (
+        <View
+          key={clase.id}
+          style={{
+            backgroundColor: '#E0F2FE',
+            padding: 12,
+            borderRadius: 12,
+            marginBottom: 12,
+            borderWidth: 1,
+            borderColor: '#10b981',
+          }}
+        >
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 4 }}>
+            <CalendarCheck size={18} color="#047857" style={{ marginRight: 6 }} />
+            <Text style={{ fontSize: 16, fontWeight: '600' }}>{clase.nombre}</Text>
+          </View>
+          <Text style={{ marginLeft: 24, color: '#374151' }}>{clase.horario}</Text>
+          <Pressable
+            onPress={() => cancelarReservacion(clase.id)}
+            style={{
+              backgroundColor: '#EF4444',
+              padding: 10,
+              borderRadius: 8,
+              marginTop: 8,
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <X size={16} color="#fff" style={{ marginRight: 6 }} />
+            <Text style={{ color: 'white', textAlign: 'center' }}>Cancelar</Text>
+          </Pressable>
+        </View>
+      ))
+    )}
+
+    <Pressable
+      onPress={() => setModalVisible(false)}
+      style={{
+        marginTop: 16,
+        backgroundColor: '#10b981',
+        padding: 12,
+        borderRadius: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <X size={18} color="#fff" style={{ marginRight: 6 }} />
+      <Text style={{ color: 'white', textAlign: 'center' }}>Cerrar</Text>
+    </Pressable>
+  </View>
+</Modal>
     </>
   );
 };
